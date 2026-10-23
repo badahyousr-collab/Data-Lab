@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101117">
+  <meta name="description" content="pipisso Data Lab — демонстрация аналитики продаж на вымышленных данных">
+  <title>pipisso Data Lab · Аналитика продаж</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="./" aria-label="pipisso Data Lab"><span class="brand-mark">p.</span><span>pipisso <strong>Data Lab</strong></span></a>
+      <div class="side-caption">ПОРТФОЛИО / ДАННЫЕ</div>
+      <div class="nav active"><span class="nav-icon">▤</span> Обзор продаж</div>
+      <div class="side-bottom"><span class="status-dot"></span> Демо · вымышленные данные</div>
+    </aside>
+    <main>
+      <header class="topbar"><span>DATA LAB <span class="slash">/</span> АНАЛИТИКА ПРОДАЖ</span><a href="https://github.com/badahyousr-collab/Data-Lab" target="_blank" rel="noopener noreferrer">Код на GitHub ↗</a></header>
+      <section class="intro"><div><div class="eyebrow"><span class="pulse"></span> ДЕМОНСТРАЦИОННЫЙ ПРОЕКТ</div><h1>Продажи под<br><em>контролем.</em></h1><p>Заказы, оплаты и возвраты собраны в одну понятную картину. Все данные здесь вымышленные.</p></div><div class="orbit" aria-hidden="true"><div class="orbit-core"></div><div class="orbit-ring one"></div><div class="orbit-ring two"></div><div class="orbit-point"></div></div></section>
+      <section class="filter-panel" aria-label="Фильтры"><div class="filter-heading"><span>Срез данных</span><span class="filter-hint" id="row-count"></span></div><div class="filter-grid"><label>С даты<input id="from-date" type="date"></label><label>По дату<input id="to-date" type="date"></label><label>Категория<select id="category"><option value="">Все категории</option></select></label><button id="reset" type="button">Сбросить ↺</button></div><p id="filter-error" class="error" role="alert" hidden></p></section>
+      <section class="metrics" aria-label="Показатели"><article class="metric accent"><span class="metric-label">Чистая выручка</span><strong id="revenue">—</strong><small>Подтверждённые оплаты − возвраты</small></article><article class="metric"><span class="metric-label">Средний чек</span><strong id="average">—</strong><small>По покупкам с положительным итогом</small></article><article class="metric"><span class="metric-label">Покупки</span><strong id="purchases">—</strong><small>После учёта возвратов</small></article><article class="metric"><span class="metric-label">Повторные покупатели</span><strong id="repeat">—</strong><small>Две и более покупки</small></article></section>
+      <section class="charts"><article class="panel trend"><div class="panel-head"><div><span class="section-kicker">ДИНАМИКА</span><h2>Выручка по месяцам</h2></div><span class="panel-meta">₽ / дата заказа</span></div><div id="trend-chart" class="chart" role="img" aria-label="График выручки по месяцам"></div></article><article class="panel product"><div class="panel-head"><div><span class="section-kicker">АССОРТИМЕНТ</span><h2>Популярные товары</h2></div><span class="panel-meta">Единиц после возвратов</span></div><div id="product-chart" class="product-chart"></div></article></section>
+      <section class="detail"><div><span class="section-kicker">КАК УСТРОЕНО</span><h2>От CSV до цифр на экране</h2><p>Python проверяет снимок данных и загружает его в SQLite. SQL считает показатели, а сайт показывает подготовленную выгрузку. Повторная загрузка не создаёт дубли.</p></div><a href="https://github.com/badahyousr-collab/Data-Lab/blob/main/docs/01-data-contract.md" target="_blank" rel="noopener noreferrer">Правила расчёта <span>↗</span></a></section>
+      <footer>pipisso Data Lab <span>·</span> Синтетические данные <span>·</span> Возвраты учтены по дате исходного заказа</footer>
+    </main>
+  </div>
+</body>
+</html>
